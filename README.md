@@ -6,14 +6,14 @@
   <h1>Employee Training Assistant</h1>
 
   <p>
-    An AI-powered onboarding and HR assistant designed to help Toyotetsu employees adapt faster, 
+    An AI-powered onboarding and HR assistant designed to help employees adapt faster, 
     reduce repetitive HR questions, and access company information securely and efficiently.
   </p>
 
   <h1>Overview</h1>
 
   <p>
-    The Toyotetsu Employee Training Assistant is an intelligent chatbot that supports employees 
+    Employee Training Assistant is an intelligent chatbot that supports employees 
     throughout their onboarding and daily HR processes. It leverages 
     <strong>Retrieval-Augmented Generation (RAG)</strong> to provide accurate, document-grounded 
     answers using official HR handbooks, guidelines, and instructions. Through seamless integration 
