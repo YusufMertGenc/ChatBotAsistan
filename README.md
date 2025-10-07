@@ -32,3 +32,20 @@ RAG (Retrieval-Augmented Generation)	Combines document retrieval with LLM respon
 SQLite	Lightweight database for chat history and user data
 N8N	Automation tool for workflow orchestration and background processes
 HTML, CSS, JavaScript	Frontend technologies for the web-based chat interface
+
+
+
+N8N Workflows
+
+
+<img width="717" height="322" alt="image" src="https://github.com/user-attachments/assets/c07a7c49-ef53-4cf6-b305-d6ab03f50d09" />
+
+<img width="717" height="160" alt="image" src="https://github.com/user-attachments/assets/2085c4d3-72fb-4bab-bc1d-8ca584ba38cb" />
+
+
+GUI and Overview
+
+
+<img width="1247" height="813" alt="image" src="https://github.com/user-attachments/assets/c0ff43ae-34df-4633-bde8-2ef686efcd5d" />
+
+
