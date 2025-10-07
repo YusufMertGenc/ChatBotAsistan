@@ -69,6 +69,64 @@
       <li><strong>SQLite</strong> logs conversations and document metadata.</li>
     </ol>
 
+    <h2>⚙️ Installation</h2>
+    <p>Quick start for local development:</p>
+    <pre><code># Clone
+git clone https://github.com/&lt;your-username&gt;/toyotetsu-assistant.git
+cd toyotetsu-assistant
+
+# Create venv & install
+python -m venv .venv
+source .venv/bin/activate   # on Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+
+# Run FastAPI
+uvicorn main:app --reload
+    </code></pre>
+
+    <p>Open <code>http://127.0.0.1:8000</code> in your browser to access the chat UI (if included).</p>
+
+    <h2>🧠 How It Works</h2>
+    <p>Typical flow:</p>
+    <ol>
+      <li>User asks a question via chat UI.</li>
+      <li>Backend runs a RAG search across indexed HR documents.</li>
+      <li>Qwen 2.5 7B composes an answer using retrieved context.</li>
+      <li>If needed, N8N executes an automation (notify HR, create a ticket, escalate).</li>
+      <li>Conversation and metadata are persisted in SQLite for audits and improvement.</li>
+    </ol>
+
+    <h2>🏁 Results & Impact</h2>
+    <ul>
+      <li>⏱️ Faster onboarding and reduced time-to-productivity for new hires</li>
+      <li>📖 Immediate and accurate access to institutional knowledge</li>
+      <li>🔐 Stronger data protection and internal compliance</li>
+      <li>⚙️ Department-specific customization increases operational efficiency</li>
+      <li>🤖 Scalable automation for routine HR processes</li>
+    </ul>
+
+    <h2>🎯 Project Goal</h2>
+    <p>
+      To digitalize Toyotetsu’s onboarding and training with a secure, document-grounded AI assistant that streamlines HR communication, protects corporate data, and speeds up employee adaptation.
+    </p>
+
+    <h2>📌 Notes</h2>
+    <ul>
+      <li>Only approved internal documents are used as knowledge sources.</li>
+      <li>Ensure proper access controls around document ingestion and database storage.</li>
+      <li>For production deployment, replace SQLite with a managed DB and secure the model hosting environment.</li>
+    </ul>
+
+    <p style="margin-top:18px;">
+      <a class="cta" href="#">Copy README as HTML</a>
+    </p>
+
+    <p class="muted" style="margin-top:18px">Prepared for Toyotetsu — Yusuf Mert Genç</p>
+  </div>
+</body>
+</html>
+
+
 N8N Workflows
 
 
