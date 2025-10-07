@@ -4,15 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Toyotetsu Employee Training Assistant</title>
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; background: #f9fafb; color: #111827; padding: 40px; max-width: 900px; margin: auto; }
-    h1 { color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 6px; }
-    p { margin: 10px 0; }
-    ul { margin: 10px 0 20px 20px; }
-    li { margin-bottom: 6px; }
-    img { display: block; margin: 20px auto; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-    .numbered-list { list-style: decimal; margin-left: 25px; }
-  </style>
+  
 </head>
 <body>
 
