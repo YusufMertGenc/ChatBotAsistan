@@ -1,130 +1,66 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Toyotetsu Employee Training Assistant — README</title>
-  <style>
-    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; line-height:1.6; color:#0f172a; background:#f8fafc; padding:32px; }
-    .container { max-width:900px; margin:0 auto; background:#fff; padding:28px 36px; border-radius:12px; box-shadow:0 6px 30px rgba(2,6,23,0.08); }
-    h1{ font-size:28px; margin-bottom:6px; }
-    h2{ font-size:18px; margin-top:20px; color:#0b1220; }
-    p{ margin:8px 0 12px; color:#334155; }
-    ul{ margin:8px 0 12px 20px; color:#334155; }
-    pre{ background:#0b1220; color:#e6eef8; padding:12px; border-radius:8px; overflow:auto; }
-    code{ background:#eef2ff; padding:2px 6px; border-radius:6px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace; }
-    table { border-collapse:collapse; width:100%; margin-top:8px; }
-    th, td { text-align:left; padding:10px; border-bottom:1px solid #eef2ff; }
-    .muted { color:#64748b; font-size:13px; }
-    .badge { display:inline-block; background:#eef2ff; color:#0b1220; padding:6px 10px; border-radius:999px; font-weight:600; margin-right:8px; }
-    .cta { display:inline-block; margin-top:12px; background:#0ea5a4; color:#fff; padding:10px 14px; border-radius:8px; text-decoration:none; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>🧠 Toyotetsu Employee Training Assistant</h1>
-    <p class="muted">AI-powered onboarding and HR assistant for Toyotetsu — secure, document-grounded, and automation-ready.</p>
+🧠 Toyotetsu Employee Training Assistant
 
-    <h2>🚀 Overview</h2>
-    <p>
-      The <strong>Toyotetsu Employee Training Assistant</strong> is an intelligent chatbot that helps employees during onboarding and daily HR interactions. It provides accurate answers derived from verified internal documents using a Retrieval-Augmented Generation (RAG) pipeline, integrates with automation via N8N, and supports modular agent communication through FastMCP.
-    </p>
+An AI-powered onboarding and HR assistant designed to help Toyotetsu employees adapt faster, reduce repetitive HR questions, and access company information securely and efficiently.
 
-    <h2>🧩 Features</h2>
-    <ul>
-      <li><strong>FAQ Support</strong>: Answers common HR and company questions from verified documents.</li>
-      <li><strong>Smart Routing</strong>: Directs users to the correct department or contact when needed.</li>
-      <li><strong>Document-Based Knowledge (RAG)</strong>: Retrieves and uses internal PDFs/Word docs for grounded responses.</li>
-      <li><strong>Onboarding Assistance</strong>: Guides new hires through formal procedures and orientation steps.</li>
-      <li><strong>Automated Flows (N8N)</strong>: Triggers notifications, escalations, or follow-ups via workflow automation.</li>
-      <li><strong>Data Security</strong>: All outputs are produced from approved internal sources, ensuring compliance and confidentiality.</li>
-      <li><strong>Customizable</strong>: Departments can adapt data and workflows to their needs.</li>
-    </ul>
+🚀 Overview
 
-    <h2>🛠️ Technologies Used</h2>
-    <table>
-      <thead>
-        <tr><th>Component</th><th>Description</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><span class="badge">FastAPI</span></td><td>Backend framework for API endpoints and main chatbot logic.</td></tr>
-        <tr><td><span class="badge">Qwen 2.5 7B</span></td><td>Open-source LLM used for understanding and generating responses.</td></tr>
-        <tr><td><span class="badge">FastMCP (MCP Server)</span></td><td>Manages modular communication between AI components.</td></tr>
-        <tr><td><span class="badge">RAG</span></td><td>Retrieval-Augmented Generation pipeline for document-grounded answers.</td></tr>
-        <tr><td><span class="badge">SQLite</span></td><td>Lightweight database for session and conversation logs.</td></tr>
-        <tr><td><span class="badge">N8N</span></td><td>Workflow automation and orchestration (notifications, integrations).</td></tr>
-        <tr><td><span class="badge">HTML / CSS / JavaScript</span></td><td>Frontend chat interface and interaction layer.</td></tr>
-      </tbody>
-    </table>
+The Toyotetsu Employee Training Assistant is an intelligent chatbot that supports employees throughout their onboarding and daily HR processes.
+It leverages Retrieval-Augmented Generation (RAG) to provide accurate, document-grounded answers using official HR handbooks, guidelines, and instructions.
+Through seamless integration with N8N and FastMCP (MCP Server), it also supports automated workflows and modular agent communication.
 
-    <h2>📈 System Architecture</h2>
-    <p>The system follows a modular workflow:</p>
-    <ol>
-      <li>User interacts with the <em>web chat UI</em> (HTML/CSS/JS).</li>
-      <li>Requests go to the <strong>FastAPI</strong> backend.</li>
-      <li><strong>RAG</strong> retrieves relevant context from HR documents.</li>
-      <li><strong>Qwen 2.5 7B</strong> generates context-aware responses.</li>
-      <li><strong>FastMCP</strong> (MCP Server) coordinates multi-component communication.</li>
-      <li><strong>N8N</strong> triggers automation workflows when escalation or follow-up is required.</li>
-      <li><strong>SQLite</strong> logs conversations and document metadata.</li>
-    </ol>
+🧩 Features
 
-    <h2>⚙️ Installation</h2>
-    <p>Quick start for local development:</p>
-    <pre><code># Clone
-git clone https://github.com/&lt;your-username&gt;/toyotetsu-assistant.git
-cd toyotetsu-assistant
+💬 FAQ Support: Answers frequently asked questions based on verified HR documents.
 
-# Create venv & install
-python -m venv .venv
-source .venv/bin/activate   # on Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+🧭 Smart Routing: Directs users to the right department or contact number when information is not available.
 
-# Run FastAPI
-uvicorn main:app --reload
-    </code></pre>
+📚 Document-Based Knowledge: Uses internal HR manuals and policies as knowledge sources for RAG.
 
-    <p>Open <code>http://127.0.0.1:8000</code> in your browser to access the chat UI (if included).</p>
+👥 Onboarding Assistance: Guides new employees through the orientation process and formal company procedures.
 
-    <h2>🧠 How It Works</h2>
-    <p>Typical flow:</p>
-    <ol>
-      <li>User asks a question via chat UI.</li>
-      <li>Backend runs a RAG search across indexed HR documents.</li>
-      <li>Qwen 2.5 7B composes an answer using retrieved context.</li>
-      <li>If needed, N8N executes an automation (notify HR, create a ticket, escalate).</li>
-      <li>Conversation and metadata are persisted in SQLite for audits and improvement.</li>
-    </ol>
+🔄 Automated Flows (N8N): Handles workflow automation such as notifications and information updates.
 
-    <h2>🏁 Results & Impact</h2>
-    <ul>
-      <li>⏱️ Faster onboarding and reduced time-to-productivity for new hires</li>
-      <li>📖 Immediate and accurate access to institutional knowledge</li>
-      <li>🔐 Stronger data protection and internal compliance</li>
-      <li>⚙️ Department-specific customization increases operational efficiency</li>
-      <li>🤖 Scalable automation for routine HR processes</li>
-    </ul>
+🔒 Data Security: Ensures all answers are generated from approved internal data — maintaining full compliance and confidentiality.
 
-    <h2>🎯 Project Goal</h2>
-    <p>
-      To digitalize Toyotetsu’s onboarding and training with a secure, document-grounded AI assistant that streamlines HR communication, protects corporate data, and speeds up employee adaptation.
-    </p>
+⚙️ Customizable: Each department can tailor the assistant’s data and workflows to fit its specific needs.
 
-    <h2>📌 Notes</h2>
-    <ul>
-      <li>Only approved internal documents are used as knowledge sources.</li>
-      <li>Ensure proper access controls around document ingestion and database storage.</li>
-      <li>For production deployment, replace SQLite with a managed DB and secure the model hosting environment.</li>
-    </ul>
+🛠️ Technologies Used
 
-    <p style="margin-top:18px;">
-      <a class="cta" href="#">Copy README as HTML</a>
-    </p>
+1-)FastAPI
 
-    <p class="muted" style="margin-top:18px">Prepared for Toyotetsu — Yusuf Mert Genç</p>
-  </div>
-</body>
-</html>
+2-)Qwen 2.5 7B
+
+3-)FastMCP (MCP Server)
+
+4-)RAG (Retrieval-Augmented Generation)
+
+5-)SQLite
+
+6-)N8N
+
+7-)HTML
+
+8-)CSS
+
+9-)JavaScript
+
+📈 System Architecture
+
+The system follows a modular and secure architecture:
+
+1-)User Interface (HTML/CSS/JS): Employees interact through a chat interface.
+
+2-)FastAPI Backend: Handles user requests and manages the main chatbot logic.
+
+3-)RAG Pipeline: Retrieves relevant context from HR documents.
+
+4-)Qwen 2.5 7B Model: Generates intelligent, context-aware responses.
+
+5-)FastMCP (MCP Server): Enables modular communication between model and components.
+
+6-)N8N Automations: Executes automated workflows such as routing or alerts.
+
+7-)SQLite Database: Logs conversations and manages document metadata.
 
 
 N8N Workflows
