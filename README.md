@@ -1,4 +1,4 @@
-🧠 Toyotetsu Employee Training Assistant
+🧠 <h1>Toyotetsu Employee Training Assistant</h1>
 
 An AI-powered onboarding and HR assistant designed to help Toyotetsu employees adapt faster, reduce repetitive HR questions, and access company information securely and efficiently.
 
