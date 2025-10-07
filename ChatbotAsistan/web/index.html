@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <title>TOYOTETSU Asistan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div class="logo">TT</div>
+    <div class="title">TOYOTETSU ASİSTAN</div>
+    <div class="sub">Sadece onaylı İK dokümanlarından yanıt</div>
+  </div>
+</header>
+
+<div class="layout">
+  <!-- Sol kolon: sohbet -->
+  <div>
+    <div id="chat" class="card"></div>
+    <div class="composer card">
+      <div class="row">
+        <input id="q" placeholder="Sorunuzu yazın… Örn: yıllık izin gün sayısı?" />
+        <button id="go">Gönder</button>
+      </div>
+      <div class="hint">Yanıtlar <code>hrdocs/</code> klasöründeki onaylı dokümanlara dayanır.</div>
+    </div>
+  </div>
+
+  <!-- Sağ kolon: dosya yükle + liste -->
+  <aside class="side">
+    <div class="uploader card" id="dropzone">
+      <div class="row row-upload">
+        <input type="file" id="files" multiple />
+        <button id="upload">Dosya Yükle</button>
+      </div>
+      <div class="hint">💡 Dosyaları buraya <b>sürükleyip bırakabilir</b> veya butondan seçebilirsiniz. PDF, DOCX, TXT desteklenir.</div>
+    </div>
+
+    <div class="file-list card">
+      <div class="file-list-head">
+        <h4>Yüklenen Dosyalar</h4>
+        <span id="fileCount" class="pill">0</span>
+      </div>
+      <ul id="fileList"></ul>
+    </div>
+  </aside>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
