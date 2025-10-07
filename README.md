@@ -3,7 +3,7 @@
 
 <body>
 
-  <h1>Toyotetsu Employee Training Assistant</h1>
+  <h1>Employee Training Assistant</h1>
 
   <p>
     An AI-powered onboarding and HR assistant designed to help Toyotetsu employees adapt faster, 
